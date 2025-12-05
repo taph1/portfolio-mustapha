@@ -1,0 +1,16 @@
+{
+  "nav": { "about": "À propos", "skills": "Compétences", "projects": "Projets", "contact": "Contact" },
+  "title": "Mustapha Jarju",
+  "jobTitle": "Développeur Full-Stack • Backend avec Node.js • Apprend Java/Spring Boot",
+  "aboutText": "Je suis un développeur full-stack formé dans un cours Full-Stack où j'ai construit et déployé des projets réels sur Render. J'élargis actuellement mes compétences backend en apprenant Java et Spring Boot.",
+  "skillsList": ["JavaScript", "Node.js / Express", "APIs REST", "MySQL / PHP / SUPABASE", "HTML / CSS", "GitHub", "Java (Apprentissage)", "Spring Boot (Apprentissage)", "Docker", "React"],
+  "projectsLabel": "Projets",
+  "contactLabel": "Contact",
+  "project1Desc": "API REST développée avec Node.js et Express pour gérer des données liées aux voyages. Déployée sur Render.",
+  "project2Desc": "Jeu interactif en JavaScript démontrant la logique, la gestion d'événements et le design interactif. Déployé sur Render.",
+  "soon": "Plus de projets bientôt…",
+  "name": "Nom",
+  "message": "Message",
+  "send": "Envoyer",
+  "downloadCV": "Télécharger CV"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-mustapha",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.34.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
+    "i18next": "^23.0.1",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+  "vite": "^5.4.21",
+  "@vitejs/plugin-react": "^4.7.0",
+  "tailwindcss": "^3.3.2",
+  "postcss": "^8.4.27",
+  "autoprefixer": "^10.4.14"
+}
+}
