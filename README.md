@@ -63,7 +63,11 @@ Edit the `skillsList` array in:
 
 ### Adding New Projects
 
-Projects are managed in Supabase. See `HOW_TO_ADD_PROJECTS.md` for details.
+Projects are managed in Supabase:
+1. Go to your Supabase Dashboard → Table Editor
+2. Click on the `projects` table
+3. Click "Insert row" and fill in the fields (title, description, demo, repo, etc.)
+4. Projects will appear automatically on your portfolio
 
 ### Updating CV
 
@@ -74,11 +78,12 @@ Replace `public/cv.pdf` with your CV file.
 ### Deploy to Vercel
 
 1. Push your code to GitHub
-2. Import project in Vercel
-3. Add environment variables
-4. Deploy!
-
-See `DEPLOYMENT_GUIDE.md` for detailed instructions.
+2. Go to [Vercel](https://vercel.com) and import your GitHub repository
+3. Add environment variables in Vercel:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+   - `VITE_FORMSPREE_ENDPOINT` (optional)
+4. Deploy! Vercel will automatically redeploy on every push to GitHub
 
 ## 📄 License
 
@@ -87,8 +92,8 @@ MIT License - feel free to use this for your own portfolio!
 ## 👤 Author
 
 **Mustapha Jarju**
-- Portfolio: [Your Portfolio URL]
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+- Portfolio: [Live Site](https://portfolio-nine-puce-46.vercel.app)
+- GitHub: [@taph1](https://github.com/taph1)
 - Email: actionsatis@gmail.com
 
 ## 🙏 Acknowledgments
