@@ -78,16 +78,7 @@ export default function ContactForm() {
         {t('send')}
       </button>
 
-      {!isFormspreeConfigured && (
-        <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded">
-          <p className="text-sm text-yellow-800 dark:text-yellow-200">
-            ⚠️ Email service not configured. Form will open your email client.
-          </p>
-          <p className="text-xs text-yellow-700 dark:text-yellow-300 mt-1">
-            To enable direct submission, set up Formspree (see SETUP_CONTACT_FORM.md)
-          </p>
-        </div>
-      )}
+      {/* Form uses mailto - no warning needed */}
       
       {status === 'loading' && <p className="opacity-70">Sending...</p>}
       {status === 'success' && <p className="text-green-500">Message sent. Thank you!</p>}
