@@ -39,7 +39,7 @@ export default function Home() {
       </section>
 
       <section id="projects">
-        <h2 className="text-2xl font-semibold">{t('projectsLabel')}</h2>
+        <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">{t('projectsLabel')}</h2>
         <ProjectsList />
       </section>
 
