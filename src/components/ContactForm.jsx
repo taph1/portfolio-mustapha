@@ -9,21 +9,38 @@ export default function ContactForm() {
   const [status, setStatus] = useState(null)
 
   const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT
-  const isFormspreeConfigured = endpoint && !endpoint.includes('your_form_id')
+  // Check if Formspree is properly configured (has a valid endpoint that's not a placeholder)
+  const isFormspreeConfigured = endpoint && 
+                                 endpoint.startsWith('https://formspree.io/f/') && 
+                                 !endpoint.includes('your_form_id') &&
+                                 endpoint.length > 30 // Valid Formspree IDs are longer
 
   async function handleSubmit(e) {
     e.preventDefault()
     
-    // If Formspree is not configured, use mailto as fallback
+    // Always use mailto as fallback if Formspree is not properly configured
     if (!isFormspreeConfigured) {
-      const yourEmail = 'actionsatis@gmail.com' // ← Replace with your actual email
-      const subject = encodeURIComponent(`Portfolio Contact: ${name}`)
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
-      window.location.href = `mailto:${yourEmail}?subject=${subject}&body=${body}`
-      setStatus('mailto')
-      return
+      try {
+        const yourEmail = 'actionsatis@gmail.com'
+        const subject = encodeURIComponent(`Portfolio Contact: ${name}`)
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
+        window.location.href = `mailto:${yourEmail}?subject=${subject}&body=${body}`
+        setStatus('mailto')
+        // Clear form after a short delay
+        setTimeout(() => {
+          setName('')
+          setEmail('')
+          setMessage('')
+        }, 1000)
+        return
+      } catch (err) {
+        console.error('Mailto error:', err)
+        setStatus('error')
+        return
+      }
     }
 
+    // Use Formspree if configured
     setStatus('loading')
     try {
       const res = await fetch(endpoint, {
@@ -37,10 +54,11 @@ export default function ContactForm() {
         setEmail('')
         setMessage('')
       } else {
+        console.error('Formspree error:', res.status, res.statusText)
         setStatus('error')
       }
     } catch (err) {
-      console.error(err)
+      console.error('Formspree fetch error:', err)
       setStatus('error')
     }
   }
@@ -82,8 +100,17 @@ export default function ContactForm() {
       
       {status === 'loading' && <p className="opacity-70">Sending...</p>}
       {status === 'success' && <p className="text-green-500">Message sent. Thank you!</p>}
-      {status === 'mailto' && <p className="text-blue-500">Opening your email client...</p>}
-      {status === 'error' && <p className="text-red-500">Error sending message. Please try again later.</p>}
+      {status === 'mailto' && (
+        <p className="text-blue-500">
+          ✓ Opening your email client... If it doesn't open, please email: actionsatis@gmail.com
+        </p>
+      )}
+      {status === 'error' && (
+        <div className="text-red-500">
+          <p>Unable to open email client. Please contact me directly at:</p>
+          <a href="mailto:actionsatis@gmail.com" className="underline">actionsatis@gmail.com</a>
+        </div>
+      )}
     </form>
   )
 }
