@@ -6,7 +6,7 @@
   "skillsList": ["JavaScript", "Node.js / Express", "APIs REST", "MySQL / PHP / SUPABASE", "HTML / CSS", "GitHub", "Java (Apprentissage)", "Spring Boot (Apprentissage)", "Docker", "React"],
   "projectsLabel": "Projets",
   "contactLabel": "Contact",
-  "project1Desc": "API REST développée avec Node.js et Express pour gérer des données liées aux voyages. Déployée sur Render.",
+  "project1Desc": "Application web full-stack développée avec Node.js, Express et templates EJS. Site web de réservation de voyages affichant des destinations avec prix et images. Déployée sur Render.",
   "project2Desc": "Jeu interactif en JavaScript démontrant la logique, la gestion d'événements et le design interactif. Déployé sur Render.",
   "soon": "Plus de projets bientôt…",
   "name": "Nom",
