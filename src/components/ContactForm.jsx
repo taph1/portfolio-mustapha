@@ -69,7 +69,8 @@ export default function ContactForm() {
         type="text"
         placeholder={t('name')}
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => setName(e.target.value.slice(0, 100))}
+        maxLength={100}
         className="w-full p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-700"
         required
       />
@@ -77,14 +78,16 @@ export default function ContactForm() {
         type="email"
         placeholder="Email"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(e) => setEmail(e.target.value.slice(0, 254))}
+        maxLength={254}
         className="w-full p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-700"
         required
       />
       <textarea
         placeholder={t('message')}
         value={message}
-        onChange={(e) => setMessage(e.target.value)}
+        onChange={(e) => setMessage(e.target.value.slice(0, 2000))}
+        maxLength={2000}
         rows={6}
         className="w-full p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-700"
         required
