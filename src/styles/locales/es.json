@@ -1,7 +1,7 @@
 {
   "nav": { "about": "Sobre mí", "skills": "Habilidades", "projects": "Proyectos", "contact": "Contacto" },
   "title": "Mustapha Jarju",
-  "jobTitle": "Desarrollador Full-Stack • Backend con Node.js • Aprendiendo Java/Spring Boot",
+  "jobTitle": "Desarrollador Full-Stack • Backend con Node.js / JavaScript",
   "aboutText": "Soy un desarrollador full-stack formado en un curso Full-Stack donde construí y desplegué proyectos reales en Render. Actualmente amplío mis conocimientos aprendiendo Java y Spring Boot.",
   "skillsList": ["JavaScript", "Node.js / Express", "APIs REST", "MySQL / PHP / SUPABASE", "HTML / CSS", "GitHub", "Java (Aprendiendo)", "Spring Boot (Aprendiendo)", "Docker", "React"],
   "projectsLabel": "Proyectos",
