@@ -1,6 +1,6 @@
 {
   "nav": { "about": "About", "skills": "Skills", "projects": "Projects", "contact": "Contact" },
-  "title": "Mustapha Jarju",
+  "title": "Mustapha Jarjue",
   "jobTitle": "Full-Stack Developer • Backend with Node.js / JavaScript",
   "aboutText": "I am a full-stack developer trained in a full-stack course where I built and deployed real projects on Render. I am currently expanding my backend skills by learning Java and Spring Boot. ",
   "skillsList": ["JavaScript", "Node.js / Express", "REST APIs", "MySQL / PHP / SUPABASE", "HTML / CSS", "GitHub", "Java (Learning)", "Spring Boot (Learning)", "Docker", "React"],
